@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cz.lbenda.slf4j.adapter</groupId>
+  <artifactId>slf4j-build-adapter-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>Slf4j build adapter</name>
+
+  <description>
+    SLF4J adapters for build tools
+  </description>
+
+  <url>http://vm-csobp-ci/sites/sqlcompiler/${project.version}/</url>
+
+  <scm>
+    <connection>https://github.com/lbenda/slf4j-builders-adapter.git</connection>
+    <developerConnection>https://github.com/lbenda/slf4j-builders-adapter.git</developerConnection>
+    <url>https://github.com/lbenda/slf4j-builders-adapter</url>
+  </scm>
+
+  <licenses>
+    <license>
+        <name>MIT License</name>
+        <url>http://www.opensource.org/licenses/mit-license.php</url>
+        <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Lukas Benda</name>
+    <url>http://lbenda.cz</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>lbenda</id>
+      <name>Lukas Benda</name>
+      <email>lbenda@lbenda.cz</email>
+    </developer>
+  </developers>
+
+  <modules>
+    <module>slf4j-maven-adapter</module>
+    <module>slf4j-ant-adapter</module>
+  </modules>
+
+  <properties>
+    <maven.version>3.3.9</maven.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <slf4j.version>1.7.25</slf4j.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.ant</groupId>
+        <artifactId>ant</artifactId>
+        <version>1.9.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven</groupId>
+        <artifactId>maven-plugin-api</artifactId>
+        <version>${maven.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven</groupId>
+        <artifactId>maven-core</artifactId>
+        <version>${maven.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven</groupId>
+        <artifactId>maven-compat</artifactId>
+        <version>${maven.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
