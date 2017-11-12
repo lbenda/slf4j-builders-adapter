@@ -6,7 +6,7 @@
   <groupId>cz.lbenda.slf4j.adapter</groupId>
   <artifactId>slf4j-build-adapter-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <name>Slf4j build adapter</name>
 
@@ -29,6 +29,14 @@
         <distribution>repo</distribution>
     </license>
   </licenses>
+
+  <distributionManagement>
+    <repository>
+      <id>internal.repo</id>
+      <name>local</name>
+      <url>file:///home/benzin/workspace/slf4j-builders-adapter/mvn-repo</url>
+    </repository>
+  </distributionManagement>
 
   <organization>
     <name>Lukas Benda</name>
